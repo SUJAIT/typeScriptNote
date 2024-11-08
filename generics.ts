@@ -1,4 +1,9 @@
-type genericArray = Array<string>
+{
+    /////////////////////////////////////////////////////
+    
+    
+    
+    type genericArray = Array<string>
 type genericNumber = Array<number>
 type genericBoolean = Array<boolean>
 
@@ -68,3 +73,60 @@ console.log(res20)
 const res22 = ArrayWithTuple <string,{D1:string,D2:string,D3:string}>("Bangladesh",{D1:"Dhaka",D2:"Chittagong",D3:"Mymanshing"})
 
 console.log(res22)
+
+
+// 
+//Generic function 
+function identity<T>(value: T): T {
+    return value;
+}
+
+// Usage 
+const stringValue = identity<string>("Hello Iam Sujait Ullah");
+console.log(stringValue);
+
+//
+
+//Generic With Interface Example 
+
+interface KeyValuePair<K,V,B> {
+    key : K;
+    value : V;
+    type:B
+}
+
+const numberStringExample : KeyValuePair<number,string,boolean> = {
+    key : 32,
+    value:"dcsdc",
+    type: true
+}
+
+console.log(numberStringExample)
+
+//
+
+// constraints with generic example  
+
+function printName <T extends {name:string}>(obj:T):void{
+    console.log(obj.name)
+}
+const parson1 = {
+    name: "Sujait",
+    age:25
+}
+printName(parson1)
+console.log(parson1)
+
+//
+
+
+
+
+
+
+
+
+
+///////////////////////////////////////////////
+
+}

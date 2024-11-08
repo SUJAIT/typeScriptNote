@@ -1,4 +1,6 @@
-// 1. Basic Type Assertion
+{
+    
+    // 1. Basic Type Assertion
 
 
 let someValue: unknown = "Hello, TypeScript!";
@@ -14,3 +16,8 @@ let strLength2: number = (<string>someValue).length;
 // // TypeScript might think `element` could be `null`, but if you're sure it exists:
 // element!.style.color = "blue";
 
+
+//
+
+
+}
